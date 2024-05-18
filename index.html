@@ -7,6 +7,9 @@
     <title>Document</title>
     <link href="css/bootstrap.css" rel= "stylesheet" />
     <link href="css/estilo.css" rel="stylesheet">
+
+    
+
 </head>
 <body>
 
@@ -57,6 +60,42 @@
         <h1>Sistema de Controle Acadêmico Online</h1>
         <p>Bem vindo ao nosso sistema</p>
     </div><!--container-->
+ 
+
+   <div class ="modal" id="mensagem">
+       <div class = "modal-dialog">
+          <div class = "modal-content">
+              <div class = "modal-header">
+                  <h5>Sistema Acadêmico</h5>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"
+                   onclick="fechar()"></button>
+              </div>
+                  <div class="modal-body">
+                  <p>Bem vindo ao sistema</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" onclick="fechar()"></button>
+                  </div>
+          </div>
+       </div>
+   </div> 
+
 </body>
+
+<script>
+    function abrirTela(){ 
+
+      let tela = document.getElementById('mensagem');
+      tela.style.display = "block"
+  }
+ 
+  function fechar(){
+    let tela = document.getElementById('mensagem')
+    tela.style.display = 'none';
+  }
+   abrirTela();
+</script>
+
+
 <script src="js/bootstrap.js"></script>
 </html>

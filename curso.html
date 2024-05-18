@@ -68,24 +68,70 @@
                 <td>PHP</td>
                 <td>250</td>
                 <td> <input type='button' value="Alterar" class="btn btn-secondary"> 
-                    <input type="button" value="Excluir" class="btn btn-danger"> </td>  
+                    <input type="button" value="Excluir" class="btn btn-danger" onclick="abrirTela()"> </td>  
             </tr>
             <tr>
                 <td>Excel</td>
                 <td>250</td>
                 <td> <input type='button' value="Alterar" class="btn btn-secondary"> 
-                    <input type="button" value="Excluir" class="btn btn-danger"> </td> 
+                    <input type="button" value="Excluir" class="btn btn-danger" onclick="abrirTela()"> </td> 
             </tr>
             <tr>
                 <td>Power Bi</td>
                 <td>250</td>
                 <td> <input type='button' value="Alterar" class="btn btn-secondary"> 
-                    <input type="button" value="Excluir" class="btn btn-danger"> </td>  
+                    <input type="button" value="Excluir" class="btn btn-danger" onclick="abrirTela()"> </td>  
             </tr>
          </tbody>
     </table>
 </div>
             
              <a href="formulario_curso.html" class="btn btn-primary">Novo Curso</a>
+
+
+             <div class ="modal" id="mensagem">
+                <div class = "modal-dialog">
+                   <div class = "modal-content">
+                       <div class = "modal-header">
+                           <h5>Excluir Curso</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"
+                            onclick="fechar()"></button>
+                       </div>
+                           <div class="modal-body">
+                           <p>Deseja excluir esse registro?</p>
+                           </div>
+                           <div class="modal-footer">
+                               <button type="button" class="btn btn-primary" onclick="fechar()">Não</button>
+                               <button type="button" class="btn btn-secondary" onclick="abrir()">Sim</button> 
+                           </div>
+                   </div>
+                </div>
+            </div>
 </body>
+
+<script>
+    function abrirTela(){ 
+
+      let tela = document.getElementById('mensagem');
+      tela.style.display = "block"
+  }
+ 
+  function fechar(){
+    let tela = document.getElementById('mensagem')
+    tela.style.display = 'none';
+  }
+
+  function abrir(){
+    let tela = document.getElementById('mensagem')
+    tela.style.display = alert('Excluido') 
+    tela.style.display = 'none'
+  }
+   //abrirTela();
+
+ 
+ 
+ </script>
+ 
+
+<script src="js/bootstrap.js"></script>
 </html>
